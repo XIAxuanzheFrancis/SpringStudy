@@ -11,6 +11,7 @@
   <modules>
     <module>SpringStudy-01</module>
     <module>SpringStudy-02</module>
+    <module>SpringStudy-03-IoC</module>
   </modules>
 
   <properties>
