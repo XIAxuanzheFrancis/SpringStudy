@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+  <bean id="address" class="com.xuanzhe.pojo.Address">
+    <property name="address" value="Clermont-Ferrand"></property>
+  </bean>
+  <bean id="student" class="com.xuanzhe.pojo.Student">
+    <property name="name" value="xiaxuanzhe"></property>
+    <property name="address" ref="address"></property>
+    <property name="books">
+      <array>
+        <value>book1</value>
+        <value>book2</value>
+        <value>book3</value>
+        <value>book4</value>
+      </array>
+    </property>
+    <property name="hobby">
+      <list>
+        <value>musique</value>
+        <value>film</value>
+        <value>sport</value>
+        <value>programmation</value>
+      </list>
+    </property>
+    <property name="card">
+      <map>
+        <entry key="id" value="42102665236552"></entry>
+        <entry key="carte bancaire" value="dvxv15616516"></entry>
+      </map>
+    </property>
+    <property name="game">
+      <set>
+        <value>LOL</value>
+        <value>COC</value>
+        <value>BOB</value>
+      </set>
+    </property>
+    <!--  null-->
+    <property name="wife">
+      <null></null>
+    </property>
+    <property name="info">
+      <props>
+        <prop key="idEcole">201809038</prop>
+        <prop key="M/F"></prop>
+        <prop key="username">xxz</prop>
+        <prop key="passwd">iloveyou</prop>
+      </props>
+    </property>
+  </bean>
+</beans>
