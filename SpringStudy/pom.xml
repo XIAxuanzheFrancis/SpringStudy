@@ -15,6 +15,7 @@
     <module>SpringStudy-04-di</module>
     <module>SpringStudy-05</module>
     <module>SpringStudy-06</module>
+    <module>SpringStudy-07-appConfig</module>
   </modules>
 
   <properties>
