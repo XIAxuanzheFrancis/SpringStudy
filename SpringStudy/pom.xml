@@ -16,6 +16,7 @@
     <module>SpringStudy-05</module>
     <module>SpringStudy-06</module>
     <module>SpringStudy-07-appConfig</module>
+    <module>SpringStudy-08-proxy</module>
   </modules>
 
   <properties>
