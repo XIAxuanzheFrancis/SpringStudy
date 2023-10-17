@@ -1,7 +1,7 @@
 package com.xuanzhe.demo1;
 
 public class Proxy implements Rent{
-  private  Host host;
+  private Host host;
 
   public Proxy() {
   }
