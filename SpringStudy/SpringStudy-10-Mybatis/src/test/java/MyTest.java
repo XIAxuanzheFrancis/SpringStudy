@@ -8,19 +8,28 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.Resource;
 
 public class MyTest {
+
   @Test
   public void test() throws IOException {
-    String resources = "mybatis-config.xml";
-    InputStream i = Resources.getResourceAsStream(resources);
-    SqlSessionFactory sessionFactory = new SqlSessionFactoryBuilder().build(i);
-    SqlSession sqlSession = sessionFactory.openSession(true);
-    UserMapper mapper = (UserMapper) sqlSession.getMapper(UserMapper.class);
-    List<User> userList = mapper.selectUser();
-
-    for(User user : userList){
+//    String resources = "mybatis-config.xml";
+//    InputStream i = Resources.getResourceAsStream(resources);
+//    SqlSessionFactory sessionFactory = new SqlSessionFactoryBuilder().build(i);
+//    SqlSession sqlSession = sessionFactory.openSession(true);
+//    UserMapper mapper = (UserMapper) sqlSession.getMapper(UserMapper.class);
+//    List<User> userList = mapper.selectUser();
+//
+//    for(User user : userList){
+//      System.out.println(user);
+//    }
+    ApplicationContext context = new ClassPathXmlApplicationContext("spring-dao.xml");
+    UserMapper userMapper = (UserMapper) context.getBean("userMapper");
+    List<User> userList = userMapper.selectUser();
+    for (User user : userList) {
       System.out.println(user);
     }
   }
