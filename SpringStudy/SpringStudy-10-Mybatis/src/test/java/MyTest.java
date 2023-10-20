@@ -27,10 +27,11 @@ public class MyTest {
 //      System.out.println(user);
 //    }
     ApplicationContext context = new ClassPathXmlApplicationContext("spring-dao.xml");
-    UserMapper userMapper = (UserMapper) context.getBean("userMapper");
+    UserMapper userMapper = (UserMapper) context.getBean("userMapper2");
     List<User> userList = userMapper.selectUser();
     for (User user : userList) {
       System.out.println(user);
     }
   }
+
 }

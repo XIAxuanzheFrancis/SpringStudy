@@ -21,6 +21,7 @@
     <module>Spring-09-AOP2</module>
     <module>SpringStudy-09-AOP3</module>
     <module>SpringStudy-10-Mybatis</module>
+    <module>SpringStudy-11-transaction</module>
   </modules>
 
   <properties>
