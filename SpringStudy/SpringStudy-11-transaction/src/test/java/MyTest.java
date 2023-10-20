@@ -1,15 +1,20 @@
 import com.xuanzhe.mapper.UserMapper;
 import com.xuanzhe.pojo.User;
+import java.io.IOException;
+import java.util.List;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MyTest {
+
   @Test
-  public void test01(){
-    ApplicationContext context = new ClassPathXmlApplicationContext("spring-dao.xml");
-    UserMapper userMapper =  (UserMapper) context.getBean("userMapper");
-    for(User user : userMapper.selectUser()){
+  public void test() throws IOException {
+
+    ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+    UserMapper userMapper = (UserMapper) context.getBean("userMapper");
+    List<User> userList = userMapper.selectUser();
+    for (User user : userList) {
       System.out.println(user);
     }
   }

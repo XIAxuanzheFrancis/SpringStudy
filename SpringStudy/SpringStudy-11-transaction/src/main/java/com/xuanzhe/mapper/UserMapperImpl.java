@@ -6,7 +6,6 @@ import org.apache.ibatis.session.SqlSession;
 import org.mybatis.spring.support.SqlSessionDaoSupport;
 
 public class UserMapperImpl extends SqlSessionDaoSupport implements UserMapper{
-
   @Override
   public List<User> selectUser() {
     SqlSession sqlSession = getSqlSession();
