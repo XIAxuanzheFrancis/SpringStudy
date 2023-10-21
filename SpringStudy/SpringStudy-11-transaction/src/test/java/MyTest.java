@@ -17,5 +17,11 @@ public class MyTest {
     for (User user : userList) {
       System.out.println(user);
     }
+//    userMapper.addUser(new User(5,"夏烜哲","654321"));
+//    userMapper.deleteUser(1);
+//    userList = userMapper.selectUser();
+//    for (User user : userList) {
+//      System.out.println(user);
+//    }
   }
 }
